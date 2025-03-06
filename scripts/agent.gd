@@ -13,7 +13,7 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	var direction2 := Input.get_axis("down", "sddup")
+	var direction2 := Input.get_axis("down", "up")
 	if direction2:
 		velocity.y = direction2 * -SPEED
 	else:
