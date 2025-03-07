@@ -7,6 +7,7 @@ var is_moving
 var targets=[]
 var arrived
 
+<<<<<<< HEAD
 func _ready():
 	
 	astar_grid = AStarGrid2D.new()
