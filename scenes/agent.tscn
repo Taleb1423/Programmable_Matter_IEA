@@ -17,5 +17,6 @@ position = Vector2(0, -64)
 shape = SubResource("RectangleShape2D_vg1ek")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -65)
+position = Vector2(0, -64)
+skew = -0.0174533
 texture = ExtResource("1_2ktgm")

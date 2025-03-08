@@ -33,20 +33,22 @@ func _ready():
 				
 				targets.push_back(tile_position)
 		
-	print(targets)		
+	print(targets)	
+		
+		
 func _process(_delta: float) -> void:
-	
 	if is_moving or arrived:
 		return
 	move()
 	
 	
 func move():
-	var path = astar_grid.get_id_path(tilemap.local_to_map(global_position),targets[4])
+	var path = astar_grid.get_id_path(tilemap.local_to_map(global_position),targets[0])
 	path.pop_front()
 	if path.is_empty():
 		print("no path")
 		return
+		
 	var original_position =Vector2(global_position)
 	global_position= tilemap.map_to_local(path[0])
 	sprite_2d.global_position= original_position
