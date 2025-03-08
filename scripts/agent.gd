@@ -7,7 +7,6 @@ var is_moving
 var targets=[]
 var arrived
 
-<<<<<<< HEAD
 func _ready():
 	
 	astar_grid = AStarGrid2D.new()
@@ -34,7 +33,7 @@ func _ready():
 				
 				targets.push_back(tile_position)
 		
-	print(targets)			
+	print(targets)		
 func _process(_delta: float) -> void:
 	
 	if is_moving or arrived:
@@ -53,15 +52,16 @@ func move():
 	sprite_2d.global_position= original_position
 	is_moving=true
 	
+		
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		sprite_2d.global_position = sprite_2d.global_position.move_towards(global_position,1)
+		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 200 * delta) 
+
 		if sprite_2d.global_position != global_position:
 			return
 		else:
-			is_moving=false
-		
-		
+			is_moving = false
+	
 	
 		
 			
