@@ -57,7 +57,7 @@ func move():
 		
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 200 * delta) 
+		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1) 
 
 		if sprite_2d.global_position != global_position:
 			return
