@@ -43,7 +43,7 @@ func _process(_delta: float) -> void:
 	
 	
 func move():
-	var path = astar_grid.get_id_path(tilemap.local_to_map(global_position),targets[1])
+	var path = astar_grid.get_id_path(tilemap.local_to_map(global_position),targets[7])
 	path.pop_front()
 	if path.is_empty():
 		print("no path")
@@ -63,7 +63,3 @@ func _physics_process(delta: float) -> void:
 			return
 		else:
 			is_moving = false
-	
-	
-		
-			

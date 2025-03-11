@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b776y760eow8q"]
+[gd_scene load_steps=4 format=3 uid="uid://uxc0o41aicpq"]
 
 [ext_resource type="Texture2D" uid="uid://boj5mbhcm8jw2" path="res://assets/sprites/icon.svg" id="1_2ktgm"]
 [ext_resource type="Script" path="res://scripts/agent.gd" id="1_f71j5"]
@@ -16,7 +16,6 @@ z_index = 2
 shape = SubResource("RectangleShape2D_vg1ek")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-0.558563, 0)
 scale = Vector2(1.08032, 1)
 skew = -0.0174533
 texture = ExtResource("1_2ktgm")
