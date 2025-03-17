@@ -3,19 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://boj5mbhcm8jw2" path="res://assets/sprites/icon.svg" id="1_2ktgm"]
 [ext_resource type="Script" uid="uid://xrsrhffphx53" path="res://scripts/agent.gd" id="1_f71j5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg1ek"]
-size = Vector2(120, 120)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc63n"]
+size = Vector2(36, 33)
 
-[node name="Agent" type="CharacterBody2D"]
-z_index = 2
-scale = Vector2(0.25, 0.25)
+[node name="Agent" type="CharacterBody2D" groups=["agents"]]
+z_index = 4
 script = ExtResource("1_f71j5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
-shape = SubResource("RectangleShape2D_vg1ek")
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_yc63n")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1.08032, 1)
+scale = Vector2(0.25, 0.25)
 skew = -0.0174533
 texture = ExtResource("1_2ktgm")
