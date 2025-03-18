@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xrsrhffphx53" path="res://scripts/agent.gd" id="1_f71j5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc63n"]
-size = Vector2(36, 33)
+size = Vector2(25.5556, 18.8889)
 
 [node name="Agent" type="CharacterBody2D" groups=["agents"]]
 z_index = 4
@@ -12,6 +12,7 @@ script = ExtResource("1_f71j5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
+position = Vector2(0.5, -0.5)
 scale = Vector2(0.9, 0.9)
 shape = SubResource("RectangleShape2D_yc63n")
 
