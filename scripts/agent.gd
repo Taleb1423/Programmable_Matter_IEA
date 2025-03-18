@@ -20,33 +20,29 @@ func _process(_delta: float) -> void:
 	
 	
 func move():
-	
-	
-	
-	
-	path = target_list.Astart_path(tilemap.local_to_map(global_position),self)
+	path = target_list.Astart_path(tilemap.local_to_map(initial_pos),tilemap.local_to_map(global_position),self)
 	if path.is_empty():
 		print(str(name)+": no target")
 		return
 	path.pop_front()
 	if path.is_empty():
-		print(str(name)+"no path")
-		return
+		arrived.emit(self)
+		return	
+	
 	var original_position =Vector2(global_position)
 	
 	global_position= tilemap.map_to_local(path[0])
 	sprite_2d.global_position= original_position
-	var dest= path.pop_front()
-	if path.is_empty():
-		arrived.emit(dest)
-		is_done=true
+	
+	if path.size() == 1 :
+		arrived.emit(self)	
 	
 	is_moving=true
 	
 		
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 3) 
+		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1) 
 
 		if sprite_2d.global_position != global_position:
 			return
