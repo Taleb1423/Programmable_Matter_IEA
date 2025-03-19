@@ -18,7 +18,12 @@ enum PlacementType { NONE, TARGET, OBSTACLE }
 var current_placement_type = PlacementType.NONE
 var targets=[]
 @onready var agent_scene = preload("res://scenes/agent.tscn")
-
+@onready var target_button = $Target_Button
+@onready var obstacle_button = $Obstacle_Button
+@onready var start_button = $start
+@onready var reset = $reset
+@onready var set_speed = $speed
+@onready var set_nb = $agent_nb
 func _ready():
 	pass
 	
@@ -59,7 +64,7 @@ func place_target(tile_pos: Vector2i) -> void:
 
 func place_obstacle(tile_pos: Vector2i) -> void:
 	var source_id = 0
-	var atlas_coordo = Vector2i(3, 6)
+	var atlas_coordo = Vector2i(8, 2)
 	
 	tilemap.set_cell(tile_pos, source_id, atlas_coordo)
 	print("Obstacle placed at:", tile_pos)
@@ -127,6 +132,15 @@ func sort_targets(a,b)->bool:
 
 
 func _on_start_pressed() -> void:
+	agent_nb = int(set_nb.text)
+	
+	target_button.visible=false
+	obstacle_button.visible=false
+	start_button.visible=false
+	set_nb.visible = false
+	set_speed.visible = false
+	for a in get_tree().get_nodes_in_group("agents"):
+		a.queue_free()
 	astar_grid = AStarGrid2D.new()
 	astar_grid.region =tilemap.get_used_rect()
 	astar_grid.cell_size =Vector2(32,32)
@@ -190,3 +204,9 @@ func Astart_path(original_pos,pos,a1):
 		astar_grid.set_point_solid(poss,false)
 	
 	return 
+
+
+
+func _on_reset_pressed() -> void:
+	 # Replace with function body.
+	get_tree().reload_current_scene()

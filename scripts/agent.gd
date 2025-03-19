@@ -4,14 +4,17 @@ var astar_grid:AStarGrid2D
 @onready var tilemap= $"../Map"
 @onready var target_list=$".."
 @onready var sprite_2d=$Sprite2D
+@onready var get_speed=$"../speed"
 var is_moving
 var is_done
+var speed
 signal arrived(pos)
 var initial_pos
 var path
 func _ready():
 	is_done=false
 	initial_pos = global_position
+	speed = int(get_speed.text)
 		
 func _process(_delta: float) -> void:
 	if is_moving or is_done:
@@ -42,7 +45,7 @@ func move():
 		
 func _physics_process(delta: float) -> void:
 	if is_moving:
-		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, 1) 
+		sprite_2d.global_position = sprite_2d.global_position.move_toward(global_position, speed) 
 
 		if sprite_2d.global_position != global_position:
 			return
