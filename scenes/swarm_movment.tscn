@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=4 uid="uid://gkp6cpkgx007"]
+[gd_scene load_steps=5 format=4 uid="uid://luw1nepw4b58"]
 
-[ext_resource type="Script" uid="uid://cwjqhlr0vg164" path="res://scenes/root.gd" id="1_lrqlo"]
-[ext_resource type="Texture2D" uid="uid://do7sgvca8jn81" path="res://assets/tileset/32x32_map_tile v3.1 [MARGINLESS].png" id="2_u1u88"]
+[ext_resource type="Texture2D" uid="uid://do7sgvca8jn81" path="res://assets/tileset/32x32_map_tile v3.1 [MARGINLESS].png" id="1_v6gv5"]
+[ext_resource type="Script" uid="uid://bxbifr4omm1g5" path="res://scripts/swarm_movment.gd" id="1_xbq8k"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_twpsu"]
-texture = ExtResource("2_u1u88")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sbnhx"]
+texture = ExtResource("1_v6gv5")
 texture_region_size = Vector2i(32, 32)
 use_texture_padding = false
 0:0/0 = 0
@@ -37,9 +37,13 @@ use_texture_padding = false
 2:1/0 = 0
 2:1/0/custom_data_0 = true
 3:1/0 = 0
+3:1/0/custom_data_0 = true
 4:1/0 = 0
+4:1/0/custom_data_0 = true
 5:1/0 = 0
+5:1/0/custom_data_0 = true
 6:1/0 = 0
+6:1/0/custom_data_0 = true
 7:1/0 = 0
 8:1/0 = 0
 9:1/0 = 0
@@ -64,9 +68,13 @@ use_texture_padding = false
 2:2/0 = 0
 2:2/0/custom_data_0 = true
 3:2/0 = 0
+3:2/0/custom_data_0 = true
 4:2/0 = 0
+4:2/0/custom_data_0 = true
 5:2/0 = 0
+5:2/0/custom_data_0 = true
 6:2/0 = 0
+6:2/0/custom_data_0 = true
 7:2/0 = 0
 8:2/0 = 0
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -91,10 +99,14 @@ use_texture_padding = false
 2:3/0 = 0
 2:3/0/custom_data_0 = true
 3:3/0 = 0
+3:3/0/custom_data_0 = true
 4:3/0 = 0
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+4:3/0/custom_data_0 = true
 5:3/0 = 0
+5:3/0/custom_data_0 = true
 6:3/0 = 0
+6:3/0/custom_data_0 = true
 7:3/0 = 0
 8:3/0 = 0
 9:3/0 = 0
@@ -122,9 +134,11 @@ use_texture_padding = false
 3:4/0/custom_data_0 = true
 3:4/1 = 1
 4:4/0 = 0
+4:4/0/custom_data_0 = true
 5:4/0 = 0
 5:4/0/custom_data_0 = true
 6:4/0 = 0
+6:4/0/custom_data_0 = true
 7:4/0 = 0
 8:4/0 = 0
 9:4/0 = 0
@@ -708,61 +722,66 @@ use_texture_padding = false
 21:28/0 = 0
 22:28/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_2d2ye"]
+[sub_resource type="TileSet" id="TileSet_xbq8k"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 custom_data_layer_0/name = "Free"
 custom_data_layer_0/type = 1
 custom_data_layer_1/name = "target"
 custom_data_layer_1/type = 1
-sources/0 = SubResource("TileSetAtlasSource_twpsu")
+sources/0 = SubResource("TileSetAtlasSource_sbnhx")
 
-[node name="root" type="Node2D"]
-script = ExtResource("1_lrqlo")
+[node name="Swarm_movment" type="Node2D"]
+script = ExtResource("1_xbq8k")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, 2)
+[node name="Map" type="TileMapLayer" parent="."]
+position = Vector2(1, 1)
+tile_map_data = PackedByteArray("AAD6//r/AAATAAUAAAD6//v/AAATAAUAAAD6//z/AAATAAUAAAD6//3/AAATAAUAAAD6//7/AAAUAAcAAAD6////AAAUAAcAAAD6/wAAAAAUAAcAAAD6/wEAAAAUAAcAAAD6/wIAAAAUAAcAAAD6/wMAAAAUAAcAAAD6/wQAAAATAAUAAAD7//r/AAATAAUAAAD7//v/AAADAAQAAAD7//z/AAADAAQAAAD7//3/AAADAAQAAAD7//7/AAADAAQAAAD7////AAADAAQAAAD7/wAAAAADAAQAAAD7/wEAAAADAAQAAAD7/wIAAAADAAQAAAD8//r/AAATAAUAAAD8//v/AAADAAQAAAD8//7/AAADAAQAAAD8////AAADAAQAAAD8/wAAAAADAAQAAAD8/wEAAAADAAQAAAD8/wIAAAADAAQAAAD9//r/AAATAAUAAAD9//v/AAADAAQAAAD9//3/AAADAAQAAAD9//7/AAADAAQAAAD9////AAADAAQAAAD9/wAAAAADAAQAAAD9/wEAAAADAAQAAAD9/wIAAAADAAQAAAD+//r/AAATAAUAAAD+////AAADAAQAAAD+/wAAAAADAAQAAAD+/wEAAAADAAQAAAD+/wIAAAADAAQAAAD///r/AAATAAUAAAD///v/AAADAAQAAAD//wEAAAADAAQAAAD//wIAAAADAAQAAAAAAPr/AAATAAUAAAAAAPv/AAADAAQAAAAAAP7/AAADAAQAAAAAAP//AAADAAQAAAAAAAEAAAADAAQAAAAAAAIAAAADAAQAAAAAAAMAAAADAAQAAAAAAAQAAAADAAQAAAABAPr/AAATAAUAAAABAPv/AAADAAQAAAABAPz/AAADAAQAAAABAP3/AAADAAQAAAABAP7/AAADAAQAAAABAP//AAADAAQAAAABAAAAAAADAAQAAAABAAIAAAADAAQAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAACAPr/AAATAAUAAAACAPv/AAADAAQAAAACAPz/AAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAADAPr/AAATAAUAAAADAPv/AAADAAQAAAADAPz/AAADAAQAAAADAP3/AAADAAQAAAADAP7/AAADAAQAAAADAP//AAADAAQAAAADAAAAAAADAAQAAAADAAEAAAADAAQAAAADAAIAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAAEAPr/AAATAAUAAAAEAP7/AAADAAQAAAAEAP//AAADAAQAAAAEAAAAAAADAAQAAAAEAAEAAAADAAQAAAAEAAIAAAADAAQAAAAEAAMAAAADAAQAAAAEAAQAAAADAAQAAAAFAPr/AAATAAUAAAAFAPv/AAATAAUAAAAFAPz/AAATAAUAAAAFAP3/AAATAAUAAAAFAP7/AAATAAUAAAAFAP//AAATAAUAAAAFAAAAAAATAAUAAAAFAAEAAAATAAUAAAAFAAIAAAATAAUAAAAFAAMAAAATAAUAAAAFAAQAAAATAAUAAAD6/wUAAAATAAUAAAD7/wUAAAATAAUAAAD8/wUAAAATAAUAAAD9/wUAAAATAAUAAAD+/wUAAAATAAUAAAD//wUAAAATAAUAAAAAAAUAAAATAAUAAAABAAUAAAATAAUAAAACAAUAAAATAAUAAAADAAUAAAATAAUAAAAEAAUAAAATAAUAAAAFAAUAAAATAAUAAAAEAP3/AAADAAQAAAAEAPz/AAADAAQAAAAEAPv/AAADAAQAAAD///3/AAADAAQAAAAAAP3/AAADAAQAAAD+//3/AAADAAQAAAD//wMAAAADAAQAAAD+/wMAAAADAAQAAAD9/wMAAAADAAQAAAD8/wMAAAADAAQAAAD7/wMAAAADAAQAAAD7/wQAAAADAAQAAAD8/wQAAAADAAQAAAD9/wQAAAADAAQAAAD+/wQAAAADAAQAAAD//wQAAAADAAQAAAD+//v/AAADAAQAAAACAP3/AAADAAQAAAACAP7/AAADAAQAAAACAP//AAADAAQAAAACAAAAAAADAAQAAAACAAEAAAADAAQAAAACAAIAAAADAAQAAAABAAEAAAADAAQAAAD8//z/AAADAAQAAAD9//z/AAADAAQAAAD+//z/AAADAAQAAAD///z/AAADAAQAAAD8//3/AAADAAQAAAAAAPz/AAADAAQAAAD//wAAAAADAAQAAAAAAAAAAAADAAQAAAD/////AAADAAQAAAD///7/AAADAAQAAAD+//7/AAADAAQAAAA=")
+tile_set = SubResource("TileSet_xbq8k")
+
+[node name="Camera2D" type="Camera2D" parent="Map"]
+position = Vector2(0, 1)
 scale = Vector2(3.46826, 86.581)
 zoom = Vector2(1.25, 1.25)
 
-[node name="Map" type="TileMapLayer" parent="."]
-position = Vector2(0, 1)
-tile_map_data = PackedByteArray("AAD6//r/AAATAAUAAAD6//v/AAATAAUAAAD6//z/AAATAAUAAAD6//3/AAATAAUAAAD6//7/AAAUAAcAAAD6////AAAUAAcAAAD6/wAAAAAUAAcAAAD6/wEAAAAUAAcAAAD6/wIAAAAUAAcAAAD6/wMAAAAUAAcAAAD6/wQAAAATAAUAAAD7//r/AAATAAUAAAD7//v/AAADAAQAAAD7//z/AAADAAQAAAD7//3/AAADAAQAAAD7//7/AAADAAQAAAD7////AAADAAQAAAD7/wAAAAADAAQAAAD7/wEAAAADAAQAAAD7/wIAAAADAAQAAAD8//r/AAATAAUAAAD8//v/AAADAAQAAAD8//7/AAAFAAQAAAD8////AAADAAQAAAD8/wAAAAADAAQAAAD8/wEAAAADAAQAAAD8/wIAAAADAAQAAAD9//r/AAATAAUAAAD9//v/AAADAAQAAAD9//3/AAADAAQAAAD9//7/AAADAAQAAAD9////AAADAAQAAAD9/wAAAAAFAAQAAAD9/wEAAAADAAQAAAD9/wIAAAADAAQAAAD+//r/AAATAAUAAAD+//7/AAADAAQAAAD+////AAADAAQAAAD+/wAAAAAFAAQAAAD+/wEAAAAFAAQAAAD+/wIAAAADAAQAAAD///r/AAATAAUAAAD///v/AAADAAQAAAD///7/AAADAAQAAAD//wEAAAAFAAQAAAD//wIAAAADAAQAAAAAAPr/AAATAAUAAAAAAPv/AAADAAQAAAAAAP7/AAADAAQAAAAAAP//AAADAAQAAAAAAAEAAAAFAAQAAAAAAAIAAAADAAQAAAAAAAMAAAADAAQAAAAAAAQAAAADAAQAAAABAPr/AAATAAUAAAABAPv/AAADAAQAAAABAPz/AAADAAQAAAABAP3/AAADAAQAAAABAP7/AAADAAQAAAABAP//AAADAAQAAAABAAAAAAAFAAQAAAABAAIAAAADAAQAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAACAPr/AAATAAUAAAACAPv/AAADAAQAAAACAPz/AAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAADAPr/AAATAAUAAAADAPv/AAADAAQAAAADAPz/AAADAAQAAAADAP3/AAADAAQAAAADAP7/AAADAAQAAAADAP//AAADAAQAAAADAAAAAAADAAQAAAADAAEAAAADAAQAAAADAAIAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAAEAPr/AAATAAUAAAAEAP7/AAADAAQAAAAEAP//AAADAAQAAAAEAAAAAAADAAQAAAAEAAEAAAADAAQAAAAEAAIAAAADAAQAAAAEAAMAAAADAAQAAAAEAAQAAAADAAQAAAAFAPr/AAATAAUAAAAFAPv/AAATAAUAAAAFAPz/AAATAAUAAAAFAP3/AAATAAUAAAAFAP7/AAATAAUAAAAFAP//AAATAAUAAAAFAAAAAAATAAUAAAAFAAEAAAATAAUAAAAFAAIAAAATAAUAAAAFAAMAAAATAAUAAAAFAAQAAAATAAUAAAD6/wUAAAATAAUAAAD7/wUAAAATAAUAAAD8/wUAAAATAAUAAAD9/wUAAAATAAUAAAD+/wUAAAATAAUAAAD//wUAAAATAAUAAAAAAAUAAAATAAUAAAABAAUAAAATAAUAAAACAAUAAAATAAUAAAADAAUAAAATAAUAAAAEAAUAAAATAAUAAAAFAAUAAAATAAUAAAAEAP3/AAADAAQAAAAEAPz/AAADAAQAAAAEAPv/AAADAAQAAAD///3/AAADAAQAAAAAAP3/AAADAAQAAAD+//3/AAADAAQAAAD//wMAAAADAAQAAAD+/wMAAAADAAQAAAD9/wMAAAADAAQAAAD8/wMAAAADAAQAAAD7/wMAAAADAAQAAAD7/wQAAAADAAQAAAD8/wQAAAADAAQAAAD9/wQAAAADAAQAAAD+/wQAAAADAAQAAAD//wQAAAADAAQAAAD+//v/AAADAAQAAAACAP3/AAADAAQAAAACAP7/AAAFAAQAAAACAP//AAAFAAQAAAACAAAAAAAFAAQAAAACAAEAAAAFAAQAAAACAAIAAAADAAQAAAABAAEAAAAFAAQAAAD8//z/AAADAAQAAAD9//z/AAADAAQAAAD+//z/AAADAAQAAAD///z/AAADAAQAAAD8//3/AAADAAQAAAAAAPz/AAADAAQAAAD//wAAAAAFAAQAAAAAAAAAAAAFAAQAAAD/////AAADAAQAAAA=")
-tile_set = SubResource("TileSet_2d2ye")
-
 [node name="Target_Button" type="Button" parent="."]
-offset_left = -341.0
-offset_top = -181.0
-offset_right = -208.0
-offset_bottom = -115.0
+offset_left = -334.0
+offset_top = -139.0
+offset_right = -201.0
+offset_bottom = -73.0
 text = "Draw Targets"
+metadata/_edit_use_anchors_ = true
 
 [node name="Obstacle_Button" type="Button" parent="."]
-offset_left = -344.0
-offset_top = -91.0
-offset_right = -209.0
-offset_bottom = -25.0
+offset_left = -337.0
+offset_top = -49.0
+offset_right = -202.0
+offset_bottom = 17.0
 text = "Draw Obstacles"
+metadata/_edit_use_anchors_ = true
 
 [node name="start" type="Button" parent="."]
-offset_left = -307.0
-offset_top = 33.0
-offset_right = -261.0
-offset_bottom = 64.0
+offset_left = -300.0
+offset_top = 75.0
+offset_right = -254.0
+offset_bottom = 106.0
 text = "Start"
+metadata/_edit_use_anchors_ = true
 
 [node name="reset" type="Button" parent="."]
-offset_left = -309.0
-offset_top = -8.0
-offset_right = -261.0
-offset_bottom = 23.0
+offset_left = -302.0
+offset_top = 34.0
+offset_right = -251.0
+offset_bottom = 65.0
 text = "Reset"
+metadata/_edit_use_anchors_ = true
 
 [node name="speed" type="LineEdit" parent="."]
-offset_left = 219.0
-offset_top = -163.0
-offset_right = 287.562
-offset_bottom = -132.0
+offset_left = 226.0
+offset_top = -121.0
+offset_right = 294.562
+offset_bottom = -90.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="speed"]
 layout_mode = 0
@@ -771,13 +790,15 @@ offset_top = -25.0
 offset_right = 72.0
 offset_bottom = -2.0
 text = "Set Speed:"
+metadata/_edit_use_anchors_ = true
 
 [node name="agent_nb" type="LineEdit" parent="."]
-offset_left = 224.0
-offset_top = -95.0
-offset_right = 292.562
-offset_bottom = -64.0
+offset_left = 231.0
+offset_top = -53.0
+offset_right = 299.562
+offset_bottom = -22.0
 placeholder_text = "Max 20"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="agent_nb"]
 layout_mode = 0
@@ -786,6 +807,7 @@ offset_top = -25.0
 offset_right = 72.0
 offset_bottom = -2.0
 text = "Set Number of Agents:"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Target_Button" to="." method="_on_target_button_pressed"]
 [connection signal="pressed" from="Obstacle_Button" to="." method="_on_obstacle_button_pressed"]

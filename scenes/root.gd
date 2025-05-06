@@ -12,6 +12,8 @@ class target:
 		ins.position = loc
 		ins.weight = w
 		return ins
+		
+
 @export var agent_nb = 0
 var astar_grid:AStarGrid2D
 enum PlacementType { NONE, TARGET, OBSTACLE }
@@ -141,6 +143,7 @@ func _on_start_pressed() -> void:
 	set_speed.visible = false
 	for a in get_tree().get_nodes_in_group("agents"):
 		a.queue_free()
+		
 	astar_grid = AStarGrid2D.new()
 	astar_grid.region =tilemap.get_used_rect()
 	astar_grid.cell_size =Vector2(32,32)

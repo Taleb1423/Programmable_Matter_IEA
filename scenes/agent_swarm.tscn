@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4e238eib1mdj"]
+
+[ext_resource type="Script" uid="uid://b3xqebrpv5vc1" path="res://scripts/agent_swarm.gd" id="1_iek5e"]
+[ext_resource type="Texture2D" uid="uid://boj5mbhcm8jw2" path="res://assets/sprites/icon.svg" id="2_qr8hy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yc63n"]
+size = Vector2(27.7778, 27.7778)
+
+[node name="Agent_swarm" type="CharacterBody2D" groups=["agents"]]
+z_index = 4
+script = ExtResource("1_iek5e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
+position = Vector2(0.5, -0.499999)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_yc63n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+skew = -0.0174533
+texture = ExtResource("2_qr8hy")
