@@ -1,0 +1,248 @@
+[gd_scene load_steps=6 format=3 uid="uid://bw2g1v0aeaoce"]
+
+[ext_resource type="Script" uid="uid://bo54qkmtiqnqd" path="res://src/main_scene.gd" id="1_anhyr"]
+[ext_resource type="PackedScene" uid="uid://c77smlw1cgsvn" path="res://src/Goal/goal.tscn" id="2_1s1ct"]
+[ext_resource type="Texture2D" uid="uid://6phn2gdqhguv" path="res://sprites/world_tileset.png" id="3_3qhf5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kyha1"]
+texture = ExtResource("3_3qhf5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:7/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:7/0 = 0
+8:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:8/0 = 0
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:8/0 = 0
+7:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:8/0 = 0
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7piql"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_kyha1")
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_anhyr")
+
+[node name="CreatureFolder" type="Node" parent="."]
+
+[node name="Goal1" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(937, 330)
+
+[node name="Goal2" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(1032, 201)
+
+[node name="Goal3" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(1034, 289)
+
+[node name="Goal4" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(991, 331)
+
+[node name="Goal5" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(1034, 248)
+
+[node name="Goal6" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(930, 201)
+
+[node name="Goal7" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(883, 202)
+
+[node name="Goal8" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(989, 201)
+
+[node name="Goal9" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(885, 248)
+
+[node name="Goal10" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(885, 291)
+
+[node name="Goal11" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(886, 337)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_7piql")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 1, 1, 0, 1, 2, 0, 1, 3, 0, 1, 4, 0, 1, 5, 0, 1, 6, 0, 1, 7, 0, 1, 8, 0, 1, 9, 0, 1, 10, 0, 1, 11, 0, 1, 12, 0, 1, 13, 0, 1, 14, 0, 1, 15, 0, 1, 16, 0, 1, 17, 0, 1, 18, 0, 1, 19, 0, 1, 20, 0, 1, 21, 0, 1, 22, 0, 1, 23, 0, 1, 24, 0, 1, 25, 0, 1, 26, 0, 1, 27, 0, 1, 28, 0, 1, 29, 0, 1, 30, 0, 1, 31, 0, 1, 32, 0, 1, 33, 0, 1, 34, 0, 1, 35, 0, 1, 36, 0, 1, 37, 0, 1, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 327680, 0, 1, 393216, 0, 1, 458752, 0, 1, 524288, 0, 1, 589824, 0, 1, 655360, 0, 1, 720896, 0, 1, 786432, 0, 1, 851968, 0, 1, 917504, 0, 1, 983040, 0, 1, 1048576, 0, 1, 1114112, 0, 1, 1179648, 0, 1, 1245184, 0, 1, 1310720, 0, 1, 1441792, 0, 1, 1376256, 0, 1, 1507328, 0, 1, 1572864, 0, 1, 1638400, 0, 1, 1703936, 0, 1, 1769472, 0, 1, 1835008, 0, 1, 1900544, 0, 1, 1966080, 0, 1, 2031616, 0, 1, 2097152, 0, 1, 2162688, 0, 1, 2228224, 0, 1, 2293760, 0, 1, 2359296, 0, 1, 2424832, 0, 1, 2490368, 0, 1, 2555904, 0, 1, 2621511, 0, 1, 2621510, 0, 1, 2621509, 0, 1, 2621508, 0, 1, 2621507, 0, 1, 2621506, 0, 1, 2621505, 0, 1, 2621504, 0, 1, 2621503, 0, 1, 2621502, 0, 1, 2621501, 0, 1, 2621500, 0, 1, 2621499, 0, 1, 2621498, 0, 1, 2621497, 0, 1, 2621496, 0, 1, 2621495, 0, 1, 2621494, 0, 1, 2621493, 0, 1, 2621492, 0, 1, 2621491, 0, 1, 2621490, 0, 1, 2621489, 0, 1, 2621488, 0, 1, 2621487, 0, 1, 2621486, 0, 1, 2621485, 0, 1, 2621484, 0, 1, 2621483, 0, 1, 2621482, 0, 1, 2621481, 0, 1, 2621480, 0, 1, 2621479, 0, 1, 2621478, 0, 1, 2621477, 0, 1, 2621476, 0, 1, 2621475, 0, 1, 2621474, 0, 1, 2621473, 0, 1, 2621472, 0, 1, 2621471, 0, 1, 2621470, 0, 1, 2621469, 0, 1, 2621468, 0, 1, 2621467, 0, 1, 2621466, 0, 1, 2621465, 0, 1, 2621464, 0, 1, 2621463, 0, 1, 2621462, 0, 1, 2621461, 0, 1, 2621460, 0, 1, 2621459, 0, 1, 2621458, 0, 1, 2621457, 0, 1, 2621456, 0, 1, 2621455, 0, 1, 2621454, 0, 1, 2621453, 0, 1, 2621452, 0, 1, 2621451, 0, 1, 2621450, 0, 1, 2621449, 0, 1, 2621448, 0, 1, 2621447, 0, 1, 2621446, 0, 1, 2621445, 0, 1, 2621444, 0, 1, 2621443, 0, 1, 2621442, 0, 1, 2621441, 0, 1, 2621440, 0, 1, 38, 0, 1, 39, 0, 1, 40, 0, 1, 41, 0, 1, 42, 0, 1, 43, 0, 1, 44, 0, 1, 45, 0, 1, 46, 0, 1, 47, 0, 1, 48, 0, 1, 49, 0, 1, 50, 0, 1, 51, 0, 1, 52, 0, 1, 53, 0, 1, 54, 0, 1, 55, 0, 1, 56, 0, 1, 57, 0, 1, 58, 0, 1, 59, 0, 1, 60, 0, 1, 61, 0, 1, 62, 0, 1, 63, 0, 1, 64, 0, 1, 65, 0, 1, 66, 0, 1, 67, 0, 1, 68, 0, 1, 69, 0, 1, 70, 0, 1, 71, 0, 1, 2555975, 0, 1, 2490439, 0, 1, 2424903, 0, 1, 2359367, 0, 1, 2293831, 0, 1, 2228295, 0, 1, 2162759, 0, 1, 2097223, 0, 1, 2031687, 0, 1, 1966151, 0, 1, 1900615, 0, 1, 1835079, 0, 1, 1769543, 0, 1, 1704007, 0, 1, 1638471, 0, 1, 1572935, 0, 1, 1507399, 0, 1, 1441863, 0, 1, 1376327, 0, 1, 1310791, 0, 1, 1245255, 0, 1, 1179719, 0, 1, 1114183, 0, 1, 1048647, 0, 1, 983111, 0, 1, 917575, 0, 1, 852039, 0, 1, 786503, 0, 1, 720967, 0, 1, 655431, 0, 1, 589895, 0, 1, 524359, 0, 1, 458823, 0, 1, 393287, 0, 1, 327751, 0, 1, 262215, 0, 1, 196679, 0, 1, 131143, 0, 1, 65607, 0, 1, 458779, 0, 4, 458780, 0, 4, 458781, 0, 4, 458782, 0, 4, 458783, 0, 4, 458784, 0, 4, 458785, 0, 4, 524322, 0, 4, 524323, 0, 4, 524324, 0, 4, 524325, 0, 4, 524326, 0, 4, 589863, 0, 4, 589864, 0, 4, 655400, 0, 4, 720936, 0, 4, 786472, 0, 4, 852007, 0, 4, 852006, 0, 4, 852005, 0, 4, 852004, 0, 4, 852003, 0, 4, 852002, 0, 4, 917538, 0, 4, 917537, 0, 4, 983073, 0, 4, 1048609, 0, 4, 1114145, 0, 4, 1114146, 0, 4, 1114147, 0, 4, 1114148, 0, 4, 1114149, 0, 4, 1048613, 0, 4, 983078, 0, 4, 917542, 0, 4, 786470, 0, 4, 786469, 0, 4, 720933, 0, 4, 655397, 0, 4, 655396, 0, 4, 589859, 0, 4, 524321, 0, 4, 524320, 0, 4, 524319, 0, 4, 524318, 0, 4, 524316, 0, 4, 524317, 0, 4, 589854, 0, 4, 589855, 0, 4, 589856, 0, 4, 589857, 0, 4, 655394, 0, 4, 655395, 0, 4, 720931, 0, 4, 589858, 0, 4, 655398, 0, 4, 589862, 0, 4, 589861, 0, 4, 655399, 0, 4, 720935, 0, 4, 720934, 0, 4, 589860, 0, 4, 786471, 0, 4, 917541, 0, 4, 917540, 0, 4, 983076, 0, 4, 983075, 0, 4, 983074, 0, 4, 917539, 0, 4, 983077, 0, 4, 1048612, 0, 4, 1048611, 0, 4, 1048610, 0, 4, 1900582, 0, 4, 1900583, 0, 4, 1900584, 0, 4, 1966121, 0, 4, 1966122, 0, 4, 1966123, 0, 4, 2031660, 0, 4, 2031661, 0, 4, 2097198, 0, 4, 2162735, 0, 4, 2228271, 0, 4, 2293807, 0, 4, 2359343, 0, 4, 2359342, 0, 4, 2359341, 0, 4, 2359340, 0, 4, 2293803, 0, 4, 2293802, 0, 4, 2359338, 0, 4, 2424874, 0, 4, 2424875, 0, 4, 2424876, 0, 4, 2490413, 0, 4, 2490414, 0, 4, 2555949, 0, 4, 2555950, 0, 4, 2490412, 0, 4, 2490411, 0, 4, 2490410, 0, 4, 2490409, 0, 4, 2490408, 0, 4, 2490407, 0, 4, 2555943, 0, 4, 2555944, 0, 4, 2555945, 0, 4, 2555946, 0, 4, 2555947, 0, 4, 2555948, 0, 4, 2293805, 0, 4, 2293806, 0, 4, 2293804, 0, 4, 2359339, 0, 4, 2228270, 0, 4, 2162734, 0, 4, 2162733, 0, 4, 2162732, 0, 4, 2228267, 0, 4, 2228268, 0, 4, 2228269, 0, 4, 2228266, 0, 4, 2293801, 0, 4, 2424873, 0, 4, 2424872, 0, 4, 2359337, 0, 4, 2359336, 0, 4, 2293800, 0, 4, 2293799, 0, 4, 2228264, 0, 4, 2228265, 0, 4, 2162730, 0, 4, 2097195, 0, 4, 2097194, 0, 4, 2097193, 0, 4, 2031656, 0, 4, 1966120, 0, 4, 1966119, 0, 4, 2031657, 0, 4, 2031658, 0, 4, 2031659, 0, 4, 2097196, 0, 4, 2097197, 0, 4, 2162731, 0, 4, 2162729, 0, 4, 2162728, 0, 4, 2097191, 0, 4, 2031655, 0, 4, 2031654, 0, 4, 2097192, 0, 4, 1900585, 0, 4, 1835049, 0, 4, 1769513, 0, 4, 1769514, 0, 4, 1769515, 0, 4, 1769516, 0, 4, 1703981, 0, 4, 1703982, 0, 4, 1703983, 0, 4, 1703984, 0, 4, 1769520, 0, 4, 1835055, 0, 4, 1835054, 0, 4, 1900589, 0, 4, 1966124, 0, 4, 1966125, 0, 4, 1966126, 0, 4, 1966127, 0, 4, 1966128, 0, 4, 1966129, 0, 4, 1966130, 0, 4, 2031665, 0, 4, 2031664, 0, 4, 2031663, 0, 4, 2031662, 0, 4, 1900590, 0, 4, 1769518, 0, 4, 1769519, 0, 4, 1769517, 0, 4, 1835052, 0, 4, 1835053, 0, 4, 1835051, 0, 4, 1900588, 0, 4, 1835050, 0, 4, 1900587, 0, 4, 1900586, 0, 4)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Goal12" parent="." instance=ExtResource("2_1s1ct")]
+position = Vector2(1035, 336)
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

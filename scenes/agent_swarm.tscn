@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://boj5mbhcm8jw2" path="res://assets/sprites/icon.svg" id="2_qr8hy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yc63n"]
-size = Vector2(27.7778, 27.7778)
+size = Vector2(35.5556, 31.1111)
 
 [node name="Agent_swarm" type="CharacterBody2D" groups=["agents"]]
 z_index = 4
@@ -12,7 +12,7 @@ script = ExtResource("1_iek5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 2
-position = Vector2(0.5, -0.499999)
+position = Vector2(-2.38419e-07, -1.99999)
 scale = Vector2(0.9, 0.9)
 shape = SubResource("RectangleShape2D_yc63n")
 

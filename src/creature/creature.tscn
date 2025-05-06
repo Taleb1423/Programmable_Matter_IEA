@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4fwaap3nxa14"]
+
+[ext_resource type="Texture2D" uid="uid://bcpsrlafeca01" path="res://sprites/white8.png" id="1_l00mj"]
+[ext_resource type="Script" path="res://src/creature/creature.gd" id="1_lv1ve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr3md"]
+size = Vector2(16, 16)
+
+[node name="Creature" type="Area2D"]
+script = ExtResource("1_lv1ve")
+
+[node name="CreatureImage" type="Sprite2D" parent="."]
+position = Vector2(0, -3.57628e-07)
+scale = Vector2(2, 2)
+texture = ExtResource("1_l00mj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mr3md")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_goal_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_creature_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
